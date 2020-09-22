@@ -7,28 +7,20 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+public class CartActivity extends AppCompatActivity {
 
-    private Button btnCart;
+    private Button btnDel;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        btnCart = (Button)findViewById(R.id.btnCart);
+        setContentView(R.layout.activity_cart);
+        btnDel = (Button)findViewById(R.id.button2);
     }
-
-
     public void onClick(View view) {
         Intent i;
-
-        switch(view.getId())
-        {
-            case R.id.btnCart : i=new Intent(this,CartActivity.class);startActivity(i);break;
+        i=new Intent(this,DeliveryDetails.class);startActivity(i);
 
 
-
-            default:break;
-        }
 
     }
 }
