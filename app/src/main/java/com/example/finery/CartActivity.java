@@ -19,8 +19,5 @@ public class CartActivity extends AppCompatActivity {
     public void onClick(View view) {
         Intent i;
         i=new Intent(this,DeliveryDetails.class);startActivity(i);
-
-
-
     }
 }

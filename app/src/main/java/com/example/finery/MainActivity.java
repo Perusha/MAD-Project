@@ -17,16 +17,12 @@ public class MainActivity extends AppCompatActivity {
         btnCart = (Button)findViewById(R.id.btnCart);
     }
 
-
     public void onClick(View view) {
         Intent i;
 
         switch(view.getId())
         {
             case R.id.btnCart : i=new Intent(this,CartActivity.class);startActivity(i);break;
-
-
-
             default:break;
         }
 
