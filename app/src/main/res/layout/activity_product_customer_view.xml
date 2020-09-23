@@ -14,7 +14,7 @@
         android:background="@drawable/product_textview"
         android:fontFamily="sans-serif-condensed-medium"
         android:padding="25dp"
-        android:text="CLOTHES that fits \nyour STYLE..."
+        android:text="@string/customer_view_title"
         android:textColor="#fff"
         android:textSize="30sp"
         android:textStyle="bold" />

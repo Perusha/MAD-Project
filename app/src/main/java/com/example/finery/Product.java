@@ -10,14 +10,15 @@ public class Product {
     private String size;
     private String color;
     private String description;
-    private Float price;
+    private int price;
+    private int offer;
 
     //Default Constructor
     public Product() {
     }
 
     //Constructor
-    public Product(String id, String title, String image, String size, String color, String description, Float price) {
+    public Product(String id, String title, String image, String size, String color, String description, int price, int offer) {
         this.id = id;
         this.title = title;
         this.image = image;
@@ -25,6 +26,7 @@ public class Product {
         this.color = color;
         this.description = description;
         this.price = price;
+        this.offer = offer;
     }
 
     //Getters and setters of variable
@@ -68,11 +70,11 @@ public class Product {
         this.description = description;
     }
 
-    public Float getPrice() {
+    public int getPrice() {
         return price;
     }
 
-    public void setPrice(Float price) {
+    public void setPrice(int price) {
         this.price = price;
     }
 
@@ -82,6 +84,14 @@ public class Product {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public int getOffer() {
+        return offer;
+    }
+
+    public void setOffer(int offer) {
+        this.offer = offer;
     }
 }
 
