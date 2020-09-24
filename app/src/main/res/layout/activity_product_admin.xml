@@ -33,13 +33,13 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="120dp"
+            android:background="@drawable/product_textview"
+            android:fontFamily="@font/yeseva_one"
             android:gravity="center"
-            android:textSize="40sp"
-            android:textColor="#010809"
-            android:textStyle="bold"
-            android:fontFamily="cursive"
-            android:text="Product Admin"
-            android:background="@drawable/product_textview"/>
+            android:text="@string/product_admin"
+            android:textColor="#FFCDD2"
+            android:textSize="35sp"
+            android:textStyle="bold" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/adminRecyclerViewGridView"
