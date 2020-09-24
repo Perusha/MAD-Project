@@ -8,6 +8,5 @@
     <string name="offer_text">0%</string>
     <string name="price_text">$123</string>
     <string name="product_name">Pink Frock</string>
-    <string name="for_more_product">For More...</string>
-    <string name="product_image">Product Image</string>
+    <string name="homepage_product">Products</string>
 </resources>

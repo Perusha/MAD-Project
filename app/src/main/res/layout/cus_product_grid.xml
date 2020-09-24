@@ -33,7 +33,7 @@
                 android:scaleType="fitXY"
                 android:adjustViewBounds="true"
                 android:layout_gravity="center_horizontal"
-                android:contentDescription="@string/product_image" />
+                android:src="@drawable/female_dresses"/>
 
             <TextView
                 android:id="@+id/productOffer"
@@ -59,9 +59,9 @@
                 android:layout_marginStart="5dp"
                 android:layout_marginTop="255dp"
                 android:layout_marginBottom="5dp"
-                android:background="#FFC400"
+                android:background="#0091EA"
                 android:gravity="center"
-                android:text="@string/price_text"
+                android:text="@string/product_price"
                 android:textColor="#FFF"
                 android:textSize="15sp" />
 
@@ -75,7 +75,7 @@
                 android:layout_marginBottom="5dp"
                 android:background="#AB161101"
                 android:gravity="center"
-                android:text="@string/product_name"
+                android:text="@string/product_title"
                 android:textColor="#FFF"
                 android:textSize="15sp" />
 
@@ -88,8 +88,8 @@
                 android:layout_marginTop="255dp"
                 android:layout_marginBottom="15dp"
                 android:textColor="#fff"
-                android:text="@string/for_more_product"
-                android:background="#FFD600"
+                android:text="@string/product_for_more"
+                android:background="#00B8D4"
                 android:textAlignment="center"
                 android:textSize="15sp"/>
 

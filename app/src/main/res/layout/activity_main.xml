@@ -27,7 +27,7 @@
             android:layout_height="80dp"
             android:layout_marginStart="24dp"
             android:layout_marginTop="30dp"
-            android:text="Products"
+            android:text="@string/homepage_product"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:background="#F8BBD0"/>
