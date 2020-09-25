@@ -3,6 +3,7 @@ package com.example.finery;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -23,6 +24,7 @@ public class DeliveryDetails extends AppCompatActivity {
     DatabaseReference dbRef;
     Delivery std;
 
+
     private void clearControls(){
         editTextFname.setText("");
         editTextLname.setText("");
@@ -35,6 +37,7 @@ public class DeliveryDetails extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_delivery_details);
+
 
         editTextFname = findViewById(R.id.editTextFname);
         editTextLname = findViewById(R.id.editTextLname);
