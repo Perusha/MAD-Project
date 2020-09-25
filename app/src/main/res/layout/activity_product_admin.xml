@@ -37,7 +37,7 @@
             android:fontFamily="@font/yeseva_one"
             android:gravity="center"
             android:text="@string/product_admin"
-            android:textColor="#FFCDD2"
+            android:textColor="#000000"
             android:textSize="35sp"
             android:textStyle="bold" />
 
