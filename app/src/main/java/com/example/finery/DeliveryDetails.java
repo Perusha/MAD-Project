@@ -72,7 +72,7 @@ public class DeliveryDetails extends AppCompatActivity {
                         std.setAddress(editTextAddress.getText().toString().trim());
                         std.setConNo( Integer.parseInt(editTextConNo.getText().toString().trim()));
 
-                        dbRef.push().setValue(std);
+                        dbRef.child("del2").setValue(std);
 
                         Toast.makeText(getApplicationContext(),"Successfully Add To The Delivery",Toast.LENGTH_LONG).show();
                         clearControls();
@@ -88,7 +88,7 @@ public class DeliveryDetails extends AppCompatActivity {
         buttonShow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DatabaseReference readref = FirebaseDatabase.getInstance().getReference().child("Delivery");
+                DatabaseReference readref = FirebaseDatabase.getInstance().getReference().child("Delivery").child("del2");
                 readref.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {

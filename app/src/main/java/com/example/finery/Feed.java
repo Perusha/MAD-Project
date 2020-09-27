@@ -4,6 +4,7 @@ public class Feed {
     private String name;
     private String proname;
     private String description;
+    private Integer contact;
 
     public Feed() {
     }
@@ -30,5 +31,13 @@ public class Feed {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public Integer getContact() {
+        return contact;
+    }
+
+    public void setContact(int contact) {
+        this.contact = contact;
     }
 }
