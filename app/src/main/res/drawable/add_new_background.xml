@@ -3,11 +3,11 @@
     android:shape="rectangle">
 
     <gradient
-        android:startColor="#EA80FC"
-        android:centerColor="#8C9EFF"
+        android:startColor="#6A1B9A"
+        android:centerColor="#E40835"
         android:type="linear"
         android:angle="315"
-        android:endColor="#EA80FC">
+        android:endColor="#00BFA5">
     </gradient>
     D500F9
 </shape>

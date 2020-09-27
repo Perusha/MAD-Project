@@ -29,4 +29,26 @@
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="product_admin">Product Admin</string>
+    <string name="product_admin">Product Admin</string>
+    <string name="product_image_more_details">Product Image</string>
+    <string name="product_title_mor_details">Product Title</string>
+    <string name="price">$120</string>
+    <string name="offer_price">Offer price</string>
+    <string name="available_size">Available size:</string>
+    <string name="available_color">Available color:</string>
+    <string name="add_to_cart">Add To cart</string>
+    <string name="product_image">Product Image</string>
+    <string name="offer">0%</string>
+    <string name="add_new_product">Add New Product</string>
+    <string name="enter_product_id">Enter Product ID:</string>
+    <string name="enter_product_title">Enter Product Title:</string>
+    <string name="enter_product_description">Enter Product Description:</string>
+    <string name="enter_product_price">Enter Product Price:</string>
+    <string name="enter_product_available_sizes">Enter Product Available Sizes:</string>
+    <string name="enter_product_available_color">Enter Product Available color:</string>
+    <string name="enter_the_uri_of_product_image">Enter the Uri of Product Image:</string>
+    <string name="enter_offer">Enter offer:</string>
+    <string name="save">Save</string>
+    <string name="clear">Clear</string>
+    <string name="frock">Frock</string>
 </resources>
