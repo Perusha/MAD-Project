@@ -15,10 +15,8 @@
     <string name="offer_price">Offer price</string>
     <string name="available_size">Available size:</string>
     <string name="sizes">S | M | L</string>
-    <string name="available_color">Available color:</string>
     <string name="colors">Green | Yellow | White</string>
     <string name="add_to_cart_btn">Add To cart</string>
-    <string name="product_image">Product Image</string>
     <string name="title_activity_product_admin">ProductAdmin</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
@@ -29,12 +27,9 @@
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="product_admin">Product Admin</string>
-    <string name="product_admin">Product Admin</string>
     <string name="product_image_more_details">Product Image</string>
     <string name="product_title_mor_details">Product Title</string>
     <string name="price">$120</string>
-    <string name="offer_price">Offer price</string>
-    <string name="available_size">Available size:</string>
     <string name="available_color">Available color:</string>
     <string name="add_to_cart">Add To cart</string>
     <string name="product_image">Product Image</string>
