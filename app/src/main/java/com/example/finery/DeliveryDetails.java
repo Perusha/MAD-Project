@@ -20,7 +20,7 @@ import com.google.firebase.database.ValueEventListener;
 public class DeliveryDetails extends AppCompatActivity {
 
     EditText editTextFname,editTextLname,editTextCity,editTextAddress,editTextConNo;
-    Button buttonAdd,buttonShow,buttonUpdate,buttonDelete;
+    Button buttonAdd,buttonShow;
     DatabaseReference dbRef;
     Delivery std;
 
@@ -47,9 +47,6 @@ public class DeliveryDetails extends AppCompatActivity {
 
         buttonAdd = findViewById(R.id.buttonAdd);
         buttonShow = findViewById(R.id.buttonShow);
-        buttonUpdate = findViewById(R.id.buttonUp);
-        buttonDelete = findViewById(R.id.buttonDelete);
-
         std = new Delivery();
         buttonAdd.setOnClickListener(new View.OnClickListener() {
             @Override
