@@ -97,7 +97,7 @@ public class DeliveryDetails extends AppCompatActivity {
                             editTextConNo.setText(dataSnapshot.child("conNo").getValue().toString());
                         }
                         else
-                            Toast.makeText(getApplicationContext(),"Nothing To Display",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(),"Nothing To Display In Delivery",Toast.LENGTH_SHORT).show();
                     }
 
                     @Override
