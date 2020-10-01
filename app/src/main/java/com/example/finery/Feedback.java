@@ -72,7 +72,7 @@ public class Feedback extends AppCompatActivity {
                     }
                 }
                 catch (NumberFormatException e){
-                    Toast.makeText(getApplicationContext(),"Invalid Contact Number",Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(),"Invalid Contact Number Please Enter valid one",Toast.LENGTH_SHORT).show();
                 }
             }
 
