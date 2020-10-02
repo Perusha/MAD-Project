@@ -57,7 +57,7 @@ public class ProductCustomerView extends AppCompatActivity {
         progressDialog.setMessage("Loading Products Please Wait...");
         progressDialog.show();
 
-        mdatabasereference = FirebaseDatabase.getInstance().getReference("products").child("accessories");
+        mdatabasereference = FirebaseDatabase.getInstance().getReference("products").child("women");
 
         recyclerView = (RecyclerView) findViewById(R.id.recyclerViewGridView);
     }
@@ -65,7 +65,7 @@ public class ProductCustomerView extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        query1 = FirebaseDatabase.getInstance().getReference().child("products").child("accessories");
+        query1 = FirebaseDatabase.getInstance().getReference().child("products").child("women");
         FirebaseRecyclerOptions<Product> options =
                 new FirebaseRecyclerOptions.Builder<Product>()
                         .setQuery(query1, Product.class)
