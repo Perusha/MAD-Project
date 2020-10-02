@@ -23,7 +23,7 @@ import com.google.firebase.database.ValueEventListener;
 public class Login extends AppCompatActivity {
 
     private EditText InputContactNumber, InputPassword;
-    private Button buttonlogin, buttonsignup, buttonforgotpw, buttonprofile;
+    private Button buttonlogin, buttonsignup, buttonforgotpw, buttonadminlogin;
     private ProgressDialog loadingBar;
     private String parentDbName = "Customers";
 
@@ -39,7 +39,7 @@ public class Login extends AppCompatActivity {
         loadingBar = new ProgressDialog(this);
         buttonsignup = findViewById(R.id.buttonsignup);
         buttonforgotpw = findViewById(R.id.buttonforgotpw);
-        buttonprofile = findViewById(R.id.buttonprofile);
+        buttonadminlogin = findViewById(R.id.buttonadminlogin);
 
         buttonlogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,20 +55,25 @@ public class Login extends AppCompatActivity {
             }
         });
 
-        buttonprofile.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openMyProfile();
-            }
-        });
-
         buttonforgotpw.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 openforgotpw();
             }
         });
+        
+        buttonadminlogin.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openAdminLogin();
+            }
+        });
 
+    }
+
+    private void openAdminLogin() {
+        Intent intent = new Intent(this, AdminLogin.class);
+        startActivity(intent);
     }
 
     private void openMyProfile() {
@@ -113,7 +118,7 @@ public class Login extends AppCompatActivity {
                             Toast.makeText(Login.this, "Logged in Successfully", Toast.LENGTH_SHORT).show();
                             loadingBar.dismiss();
 
-                            Intent intent3 = new Intent(Login.this, MyProfile.class);
+                            Intent intent3 = new Intent(Login.this, MainActivity.class);
                             Prevalent.currentOnlineCustomers = customersData;
                             startActivity(intent3);
                         }

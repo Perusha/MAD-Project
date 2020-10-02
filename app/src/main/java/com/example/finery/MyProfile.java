@@ -21,7 +21,8 @@ import java.util.HashMap;
 
 public class MyProfile extends AppCompatActivity {
     private EditText nameEdit, emailEdit, contactNoEdit;
-    private Button buttonupdate;
+    private Button buttonupdate, buttondelete;
+    DatabaseReference dbref;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +33,7 @@ public class MyProfile extends AppCompatActivity {
         emailEdit = (EditText) findViewById(R.id.profile_email_input);
         contactNoEdit = (EditText) findViewById(R.id.profile_contact_number_input);
         buttonupdate = (Button) findViewById(R.id.buttonupdate);
+        buttondelete = (Button) findViewById(R.id.buttondelete);
 
         customerInfoDispaly(nameEdit,emailEdit,contactNoEdit);
 
@@ -59,7 +61,7 @@ public class MyProfile extends AppCompatActivity {
 
     private void customerInfoDispaly(final EditText nameEdit, final EditText emailEdit, final EditText contactNoEdit) {
         String currentUser = Prevalent.currentOnlineCustomers.getContactNo();
-        DatabaseReference cusRef = FirebaseDatabase.getInstance().getReference().child("Customers").child(currentUser);
+        final DatabaseReference cusRef = FirebaseDatabase.getInstance().getReference().child("Customers").child(currentUser);
         cusRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -79,5 +81,37 @@ public class MyProfile extends AppCompatActivity {
 
             }
         });
+
+        buttondelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final String currentUser = Prevalent.currentOnlineCustomers.getContactNo();
+                DatabaseReference delRef = FirebaseDatabase.getInstance().getReference().child("Customers");
+                delRef.addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        if(dataSnapshot.exists()){
+                            dbref = FirebaseDatabase.getInstance().getReference().child("Customers").child(currentUser);
+                            dbref.removeValue();
+                            clearControls();
+                            Toast.makeText(getApplicationContext(), "Account deleted successfully!", Toast.LENGTH_SHORT).show();
+                            startActivity(new Intent(MyProfile.this, Login.class));
+                        }
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+            }
+        });
+
+    }
+
+    private void clearControls() {
+        nameEdit.setText("");
+        emailEdit.setText("");
+        contactNoEdit.setText("");
     }
 }
