@@ -50,7 +50,7 @@ public class ProductCustomerView extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getSupportActionBar().hide();
-        setContentView(R.layout.activity_product_customer_view);
+        setContentView(R.layout.activity_product_customer_more_details);
 
 
         progressDialog = new ProgressDialog(ProductCustomerView.this);
