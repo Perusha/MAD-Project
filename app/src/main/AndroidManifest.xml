@@ -14,7 +14,6 @@
         <activity android:name=".MyProfile" />
         <activity android:name=".forgotpw" />
         <activity android:name=".SignUp" />
-        <activity android:name=".MainActivity" />
         <activity android:name=".DeliveryDetails" />
         <activity android:name=".CartActivity" />
         <activity android:name=".Login">
