@@ -91,7 +91,7 @@
                         android:layout_marginStart="30dp"
                         android:fontFamily="sans-serif-light"
                         android:padding="10dp"
-                        android:text="Description i wnat to write like this okay mayhdjsnancmsanuhaww sdjfhj ahdhe ahdhau ahsda hahd jhadh"
+                        android:text="@string/product_description"
                         android:textColor="#D3000000"
                         android:textSize="17sp" />
 
@@ -133,7 +133,7 @@
                         android:background="#9A000000"
                         android:fontFamily="serif"
                         android:padding="10dp"
-                        android:text="S | M | L"
+                        android:text="@string/product_size"
                         android:textColor="#FFFFFF"
                         android:textSize="18sp"
                         android:textStyle="bold" />
@@ -165,7 +165,7 @@
                         android:layout_marginStart="15dp"
                         android:background="#C3000000"
                         android:padding="10dp"
-                        android:text="Green | Yellow | White"
+                        android:text="@string/product_color"
                         android:textAlignment="center"
                         android:textColor="#fff"
                         android:textSize="18sp"
