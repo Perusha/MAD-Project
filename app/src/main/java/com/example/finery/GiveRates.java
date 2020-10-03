@@ -23,6 +23,11 @@ public class GiveRates extends AppCompatActivity {
     DatabaseReference dbRef;
     Rate std;
 
+    private void clearControls(){
+        editTextTitle.setText("");
+        editTextCom.setText("");
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +36,8 @@ public class GiveRates extends AppCompatActivity {
         editTextTitle = findViewById(R.id.giveTitle1);
         editTextCom = findViewById(R.id.comment);
         buttonSave = findViewById(R.id.send_btn);
+        buttonShow = findViewById(R.id.show_btn);
+        buttonUpdate = findViewById(R.id.update_btn);
 
         std = new Rate();
         buttonSave.setOnClickListener(new View.OnClickListener() {
@@ -50,6 +57,7 @@ public class GiveRates extends AppCompatActivity {
                         dbRef.push().setValue(std);
 
                         Toast.makeText(getApplicationContext(),"Data Saved Successfully ",Toast.LENGTH_LONG).show();
+                        clearControls();
                     }
                 }
                 catch (NumberFormatException e){
@@ -57,6 +65,40 @@ public class GiveRates extends AppCompatActivity {
                 }
             }
 
+        });
+
+        buttonShow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                DatabaseReference readRef = FirebaseDatabase.getInstance().getReference().child("Rate").child("std1");
+                readRef.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        if (dataSnapshot.hasChildren()){
+                            editTextTitle.setText(dataSnapshot.child("Title").getValue().toString());
+                            editTextCom.setText(dataSnapshot.child("Comment").getValue().toString());
+
+                        }
+                        else
+                            Toast.makeText(getApplicationContext(),"No Source To Display",Toast.LENGTH_SHORT).show();
+
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+
+            }
+        });
+
+        buttonUpdate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
         });
 
     }
