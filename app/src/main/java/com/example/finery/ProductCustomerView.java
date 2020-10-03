@@ -50,7 +50,7 @@ public class ProductCustomerView extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         getSupportActionBar().hide();
-        setContentView(R.layout.activity_product_customer_more_details);
+        setContentView(R.layout.activity_product_customer_view);
 
 
         progressDialog = new ProgressDialog(ProductCustomerView.this);
@@ -65,7 +65,7 @@ public class ProductCustomerView extends AppCompatActivity {
     @Override
     protected void onStart() {
         super.onStart();
-        query1 = FirebaseDatabase.getInstance().getReference().child("products").child("women");
+        query1 = FirebaseDatabase.getInstance().getReference().child("products").child("accessories");
         FirebaseRecyclerOptions<Product> options =
                 new FirebaseRecyclerOptions.Builder<Product>()
                         .setQuery(query1, Product.class)

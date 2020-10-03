@@ -113,7 +113,7 @@
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="5dp"
                 android:layout_toEndOf="@id/adminpimage"
-                android:text="@string/$"
+                android:text="@string/dollor"
                 android:textSize="15sp"
                 android:textStyle="bold" />
 

@@ -42,7 +42,7 @@ public class AddNewProduct extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                dbRef = FirebaseDatabase.getInstance().getReference().child("products").child("women");
+                dbRef = FirebaseDatabase.getInstance().getReference().child("products").child("accessories");
 
                 product.setId(txtpID.getText().toString().trim());
                 product.setTitle(txtpTitle.getText().toString().trim());
@@ -73,6 +73,5 @@ public class AddNewProduct extends AppCompatActivity {
                 txtOffer.setText("");
             }
         });
-
     }
 }
