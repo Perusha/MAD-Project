@@ -19,7 +19,7 @@ import com.google.firebase.database.ValueEventListener;
 public class GiveRates extends AppCompatActivity {
 
     EditText editTextTitle,editTextCom;
-    Button buttonAdd,buttonShow,buttonUpdate,buttonDelete;
+    Button buttonSave,buttonShow,buttonUpdate,buttonDelete;
     DatabaseReference dbRef;
     Rate std;
 
@@ -30,9 +30,10 @@ public class GiveRates extends AppCompatActivity {
 
         editTextTitle = findViewById(R.id.giveTitle1);
         editTextCom = findViewById(R.id.comment);
+        buttonSave = findViewById(R.id.send_btn);
 
         std = new Rate();
-        buttonAdd.setOnClickListener(new View.OnClickListener() {
+        buttonSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 dbRef = FirebaseDatabase.getInstance().getReference().child("Rates");

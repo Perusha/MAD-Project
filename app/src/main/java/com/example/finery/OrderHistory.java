@@ -9,14 +9,17 @@ import android.widget.Button;
 
 public class OrderHistory extends AppCompatActivity {
 
+    Button prevoiusRates_btn,Rate;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_order_history);
 
-        Button prevoiusRates_btn;
 
         prevoiusRates_btn=findViewById(R.id.view_previous_rates_btn);
+        Rate = findViewById(R.id.button_);
+
 
         prevoiusRates_btn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -25,5 +28,15 @@ public class OrderHistory extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+
+        Rate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(OrderHistory.this,GiveRates.class);
+                startActivity(intent);
+            }
+        });
+
     }
 }
