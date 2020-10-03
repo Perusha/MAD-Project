@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         switch(view.getId())
         {
             case R.id.btnCart : i=new Intent(this,CartActivity.class);startActivity(i);break;
-            case R.id.btnOrders : i=new Intent(this,GiveRates.class);startActivity(i);break;
+            case R.id.btnOrders : i=new Intent(this,OrderHistory.class);startActivity(i);break;
 
 
 
