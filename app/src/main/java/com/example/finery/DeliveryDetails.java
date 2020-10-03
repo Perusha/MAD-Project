@@ -3,6 +3,7 @@ package com.example.finery;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -19,9 +20,10 @@ import com.google.firebase.database.ValueEventListener;
 public class DeliveryDetails extends AppCompatActivity {
 
     EditText editTextFname,editTextLname,editTextCity,editTextAddress,editTextConNo;
-    Button buttonAdd,buttonShow,buttonUpdate,buttonDelete;
+    Button buttonAdd,buttonShow;
     DatabaseReference dbRef;
     Delivery std;
+
 
     private void clearControls(){
         editTextFname.setText("");
@@ -36,6 +38,7 @@ public class DeliveryDetails extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_delivery_details);
 
+
         editTextFname = findViewById(R.id.editTextFname);
         editTextLname = findViewById(R.id.editTextLname);
         editTextCity = findViewById(R.id.editTextCity);
@@ -44,9 +47,6 @@ public class DeliveryDetails extends AppCompatActivity {
 
         buttonAdd = findViewById(R.id.buttonAdd);
         buttonShow = findViewById(R.id.buttonShow);
-        buttonUpdate = findViewById(R.id.buttonUp);
-        buttonDelete = findViewById(R.id.buttonDelete);
-
         std = new Delivery();
         buttonAdd.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,7 +69,7 @@ public class DeliveryDetails extends AppCompatActivity {
                         std.setAddress(editTextAddress.getText().toString().trim());
                         std.setConNo( Integer.parseInt(editTextConNo.getText().toString().trim()));
 
-                        dbRef.push().setValue(std);
+                        dbRef.child("del2").setValue(std);
 
                         Toast.makeText(getApplicationContext(),"Successfully Add To The Delivery",Toast.LENGTH_LONG).show();
                         clearControls();
@@ -85,7 +85,7 @@ public class DeliveryDetails extends AppCompatActivity {
         buttonShow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                DatabaseReference readref = FirebaseDatabase.getInstance().getReference().child("Delivery");
+                DatabaseReference readref = FirebaseDatabase.getInstance().getReference().child("Delivery").child("del2");
                 readref.addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -97,7 +97,7 @@ public class DeliveryDetails extends AppCompatActivity {
                             editTextConNo.setText(dataSnapshot.child("conNo").getValue().toString());
                         }
                         else
-                            Toast.makeText(getApplicationContext(),"Nothing To Display",Toast.LENGTH_SHORT).show();
+                            Toast.makeText(getApplicationContext(),"Nothing To Display In Delivery",Toast.LENGTH_SHORT).show();
                     }
 
                     @Override
