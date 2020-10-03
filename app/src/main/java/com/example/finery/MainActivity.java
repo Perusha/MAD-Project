@@ -9,12 +9,13 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button btnCart;
+    private Button btnCart, btnOrders;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         btnCart = (Button)findViewById(R.id.btnCart);
+        btnOrders = (Button)findViewById(R.id.btnOrders);
     }
 
 
@@ -24,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
         switch(view.getId())
         {
             case R.id.btnCart : i=new Intent(this,CartActivity.class);startActivity(i);break;
+            case R.id.btnOrders : i=new Intent(this,GiveRates.class);startActivity(i);break;
 
 
 
