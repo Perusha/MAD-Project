@@ -2,20 +2,14 @@ package com.example.finery;
 
 public class Rate {
 
-    //private String rateid;
     private String productTitle;
     private String Comment;
-   // private String rate;
 
     public Rate() {
     }
 
-    public Rate(String productTitle, String comment) {
-        this.productTitle = productTitle;
-        Comment = comment;
-    }
 
-    public String getProductTitle(String trim) {
+    public String getProductTitle() {
         return productTitle;
     }
 
@@ -23,7 +17,7 @@ public class Rate {
         this.productTitle = productTitle;
     }
 
-    public String getComment(String trim) {
+    public String getComment() {
         return Comment;
     }
 
